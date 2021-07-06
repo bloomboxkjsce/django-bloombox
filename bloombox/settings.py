@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise'
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,4 @@ MEDIA_URL='/media/'
 #CRISPY_TEMPLATE_PACK='bootstrap4'
 
 #IMPORT_EXPORT_USE_TRANSACTIONS = True
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
