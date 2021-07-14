@@ -12,7 +12,7 @@ def index(request):
 
 def campus(request):
     companies=Campus.objects.all().order_by("name")
-    active_companies=["Nurturing Lives","Synergy","LAUNCHiT","&Evolve","Learnation","Notebook","Pasken","Studbud","Passed On Wisdom","Dot Lit Media"]
+    active_companies=["Vision Mastermind","Nurturing Lives","Synergy","LAUNCHiT","&Evolve","Learnation","Notebook","Pasken","Studbud","Passed On Wisdom","Dot Lit Media"]
     context={'companies':companies,'active_companies':active_companies}
     return render(request,"campus-companies.html",context)
 
@@ -66,7 +66,7 @@ def enspire(request):
 
 def results(request):
     return render(request, 'results.html')
-        
+
 
 def team(request):
     '''team20=Team.objects.filter(year=2020)
@@ -157,5 +157,5 @@ def eSummitQuery(request):
     dataset = EventRegistrations_resource.export()
     response = HttpResponse(dataset.csv, content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="exported_data.csv"'
-    return response   
+    return response
     return redirect("index")'''
